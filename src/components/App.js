@@ -39,9 +39,14 @@ class App extends React.Component {
     render(){
         return(
             <div>
-                {this.renderHeader()}
-                <Route path='/post' component={CommentBox} />
-                <Route path='/' exact component={CommentList} />
+                <div>
+                    <h3>You need to sign in to post a comment.</h3>
+                </div>
+                <div>
+                    {this.renderHeader()}
+                    <Route path='/post' component={CommentBox} />
+                    <Route path='/' exact component={CommentList} />
+                </div>
             </div>
         )
     }
